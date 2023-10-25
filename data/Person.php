@@ -21,4 +21,10 @@ class Person
             echo "Hello $name, my name is {$this->name}" .PHP_EOL;
         }
     }
+
+    //Harusnya kan kayak Person::AUTHOR untuk akses constant
+    //Karena dia didalam classnya sendiri maka Person itu diganti jadi self
+    function info() {
+        echo "AUTHOR: " . self::AUTHOR . PHP_EOL;
+    }
 }

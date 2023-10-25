@@ -2,6 +2,10 @@
 
 require_once('data/Person.php');
 
+$person = new Person();
+
+$person->info();
+
 define("APPLICATION","belajar php oop");
 const APP_VERSION = "1.0.0";
 
