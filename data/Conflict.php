@@ -8,6 +8,21 @@ namespace Data\One {
             echo "Halo Conflict data one $name, my name is $this->name" . PHP_EOL;
         }
     }
+    class Sample {
+        var string $name;
+        
+        function sayHello (?string $name) {
+            echo "Halo Conflict data one $name, my name is $this->name" . PHP_EOL;
+        }
+    }
+
+    class Dummy {
+        var string $name;
+        
+        function sayHello (?string $name) {
+            echo "Halo Conflict data one $name, my name is $this->name" . PHP_EOL;
+        }
+    }
 }
 
 
