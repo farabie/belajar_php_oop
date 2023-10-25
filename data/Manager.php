@@ -12,5 +12,9 @@ class Manager
 
 class VicePresident extends Manager
 {
-
+    //Melakukan deklrasi ulang terhadap kelas child
+    function sayHello(string $name): void
+    {
+        echo "Halo $name, my name vp $this->name" . PHP_EOL;
+    }
 }
