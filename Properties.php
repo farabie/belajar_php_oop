@@ -2,8 +2,10 @@
 
 require_once('data/Person.php');
 
+//Manipulasi Properties
+
 $person = new Person();
-$person->name = "Muhammad Farabie";
+// $person->name = "Muhammad Farabie";
 $person->address = "Bengkulu";
 $person->country = "Indonesia";
 

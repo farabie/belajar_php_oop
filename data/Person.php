@@ -6,7 +6,8 @@ class Person
 //Sebelum memasukan data di fields kita harus mendeklarasikan object
 {
     //Membuat fields
-    var $name;
-    var $address;
-    var $country;
+    var string $name; //Properties dengan type
+    //Dengan memberi ? (tanda tanya) didepan type data
+    var ?string $address = null; //Nullable properties 
+    var string $country = "Indonesia"; //Properties default value
 }
