@@ -5,6 +5,8 @@ class Person
     //Fields/Properties/Attributes adalah data yang bisa kita sisipkan dalam code
 //Sebelum memasukan data di fields kita harus mendeklarasikan object
 {
+    //Membuat constant
+    const AUTHOR = "Farabie";
     //Membuat fields
     var string $name; //Properties dengan type
     //Dengan memberi ? (tanda tanya) didepan type data
