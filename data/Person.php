@@ -11,8 +11,12 @@ class Person
     var ?string $address = null; //Nullable properties 
     var string $country = "Indonesia"; //Properties default value
 
-    function sayHello(string $name)
+    function sayHello(?string $name)
     {
-        echo "Hello $name" . PHP_EOL;
+        if(is_null($name)) {
+            echo "Hi, my name is {$this->name}" .PHP_EOL; //This untuk mengakses object saat ini
+        }else {
+            echo "Hello $name, my name is {$this->name}" .PHP_EOL;
+        }
     }
 }
