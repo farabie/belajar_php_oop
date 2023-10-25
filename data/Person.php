@@ -13,6 +13,12 @@ class Person
     var ?string $address = null; //Nullable properties 
     var string $country = "Indonesia"; //Properties default value
 
+    //Membuat Constructor
+    public function __construct(string $name, ?string $address) {
+        $this->name = $name; //this yang ada di object diubah ke name yang ada di paramater
+        $this->address = $address; //this address yang ada diobject diubah ke adress yang ada di paramter 
+    }
+
     function sayHello(?string $name)
     {
         if(is_null($name)) {
