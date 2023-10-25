@@ -19,6 +19,10 @@ class Person
         $this->address = $address; //this address yang ada diobject diubah ke adress yang ada di paramter 
     }
 
+    function __destruct() {
+        echo "Object person {$this->name} is destroyed" .PHP_EOL;
+    }
+
     function sayHello(?string $name)
     {
         if(is_null($name)) {
