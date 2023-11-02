@@ -9,20 +9,33 @@ class Programmer
     }
 }
 
-class BackendProgrammer extends Programmer {
+class BackendProgrammer extends Programmer
+{
 
 }
 
-class FrontendProgrammer extends Programmer{}
+class FrontendProgrammer extends Programmer
+{
+}
 
-class Company {
+class Company
+{
     var Programmer $programmer;
 }
 
-function sayHelloProgrammer(Programmer $programmer) {
-    echo "Hello $programmer->name" . PHP_EOL;
+//Mengecek Type Check & Cast
+//Untuk mengecek type cast kita bisa menggunakan instance of
+function sayHelloProgrammer(Programmer $programmer)
+{
+
+    if ($programmer instanceof FrontendProgrammer) {
+        echo "Hello FrontendProgramer dengan nama $programmer->name" . PHP_EOL;
+    }else if ($programmer instanceof BackendProgrammer ) {
+        echo "Hello BackendProgrammer dengan nama $programmer->name" . PHP_EOL;
+    } else if ($programmer instanceof Programmer ) {
+        echo "Hello Programmer dengan nama $programmer->name" .PHP_EOL;
+    }
 }
 
 
 ?>
-
