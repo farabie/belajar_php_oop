@@ -4,7 +4,7 @@ namespace Data\Traits;
 
 trait SayGoodBye
 {
-    public function goodbye(?string $name):void
+    public function goodbye(?string $name): void
     {
         if (is_null($name)) {
             echo "Say goodbye name" . PHP_EOL;
@@ -16,7 +16,7 @@ trait SayGoodBye
 
 trait sayHello
 {
-    public function hello(?string $name):void
+    public function hello(?string $name): void
     {
         if (is_null($name)) {
             echo "Say hello name" . PHP_EOL;
@@ -27,15 +27,18 @@ trait sayHello
 }
 
 //Abstract function di trait
-trait CanRun {
+trait CanRun
+{
     public abstract function run(): void;
 }
 
-trait HasName{
+trait HasName
+{
     public string $name;
 }
 
-class ParentPerson {
+class ParentPerson
+{
     //Kalau dia di parent maka akan override trait
     //Kalau dia di child maka traitnya di override oleh child
     public function goodbye(?string $name): void
@@ -48,16 +51,22 @@ class ParentPerson {
     }
 }
 
-class Person extends ParentPerson
+trait All
 {
     use sayGoodBye, sayHello, HasName, CanRun {
-        //Jadi didalam trait kita dapat override visibilty dari function yang ada di trait
-        // hello as private;
-        // goodbye as private;
+    //Jadi didalam trait kita dapat override visibilty dari function yang ada di trait
+    // hello as private;
+    // goodbye as private;
     }
+}
+
+class Person extends ParentPerson
+{
+    use All;
 
     //Karena dia function abstract jadi kita wajib implementkan
-    public function run():void {
+    public function run(): void
+    {
         echo "Person {$this->name} is running" . PHP_EOL;
     }
 
