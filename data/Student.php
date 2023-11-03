@@ -20,6 +20,16 @@ class Student {
         echo "Invoke Student with Arguments $join" . PHP_EOL;
     }
 
+    public function __debugInfo():array {
+        return [
+            "id" => $this->id,
+            "name"=> $this->name,
+            "value"=> $this->value,
+            "author" => "Muhammad Farabie",
+            "place" => "Dari Rumah"
+        ];
+    }
+
     //Kita bisa juga jika tidak ingin mengcloning semua atau ada aturan
     //Beberapa properties saja yang bisa di clone itu dengan cara membuat function __clone
     public function __clone() {
