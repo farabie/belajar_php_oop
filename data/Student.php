@@ -15,6 +15,11 @@ class Student {
         return "Student id:$this->id, name:$this->name, value: $this->value". PHP_EOL;
     }
 
+    public function __invoke(... $arguments):void {
+        $join = join(',', $arguments);
+        echo "Invoke Student with Arguments $join" . PHP_EOL;
+    }
+
     //Kita bisa juga jika tidak ingin mengcloning semua atau ada aturan
     //Beberapa properties saja yang bisa di clone itu dengan cara membuat function __clone
     public function __clone() {
