@@ -14,6 +14,7 @@ var_dump($student1);
 //Jadi dia akan mengcloning semua untuk object dari student1
 //Maka dia akan otomatis mengcloning juga untuk yang private
 $student2 = clone $student1;
+//Maka pada student2 untuk sample dia uninitalized atau tidak di set
 var_dump($student2);
 
 
