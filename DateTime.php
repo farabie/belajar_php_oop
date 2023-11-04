@@ -7,6 +7,14 @@ $dateTime->setTime(10, 10, 10);
 //Akan mengubah year/month/date
 //Jadi untuk mengubah setTime dan setDate itu harus sekaligus
 $dateTime->setDate(2023, 11, 20);
+//Ini artinya menambahkan 1 tahun
+$dateTime->add(new DateInterval("P1Y"));
+//Mengurangi 1 bulan
+$minusOneMonth = new DateInterval("P1M");
+$minusOneMonth->invert = true;
+//Ini artinya menggurangi
+$dateTime->add($minusOneMonth);
+
 var_dump($dateTime);
 
 ?>
