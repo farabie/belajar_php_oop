@@ -13,11 +13,13 @@ $loginRequest->password = "    ";
 
 try {
     validateLoginRequest($loginRequest);
-echo "Valid" . PHP_EOL;
-}catch (ValidationException $exception) {
-    echo "Error : {$exception->getMessage()}" . PHP_EOL;
-}catch (Exception $exception) {
+    echo "Valid" . PHP_EOL;
+} catch (ValidationException | Exception $exception) {
     echo "Error : {$exception->getMessage()}" . PHP_EOL;
 }
+
+// catch (Exception $exception) {
+//     echo "Error : {$exception->getMessage()}" . PHP_EOL;
+// }
 
 ?>
