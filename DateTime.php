@@ -26,6 +26,11 @@ var_dump($now);
 $formatDateTime = new DateTime();
 $formatDateTime->setTimezone(new DateTimeZone("Asia/Dubai"));
 
+//Parse Date Time
+//Untuk memparsing string menjadi DateTime dengan format yang kita inginkan
+$date = DateTime::createFromFormat("Y-m-d H:i:s", "2005-10-12 11:11:11", new DateTimeZone("Asia/Dubai"));
+var_dump($date);
+
 
 $string = $formatDateTime->format("Y-m-d H:i:s");
 echo "Waktu Saat ini : $string" . PHP_EOL;
