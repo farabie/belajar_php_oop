@@ -15,8 +15,20 @@ $minusOneMonth->invert = true;
 //Ini artinya menggurangi
 $dateTime->add($minusOneMonth);
 //Cara untuk mengubah date time zonenya tapi harus mengubah php init
-$dateTime->setTimezone(new DateTimeZone("Asia/Dubai"));
-
 var_dump($dateTime);
+
+$now = new DateTime();
+$now->setTimezone(new DateTimeZone("Asia/Dubai"));
+var_dump($now);
+
+//Format DateTime biasnya digunakan untuk menampiluasi cara menampilkan date time
+//Dalam bentuk string format waktu biasanya ini berguna untuk ditampilkan di android
+$formatDateTime = new DateTime();
+$formatDateTime->setTimezone(new DateTimeZone("Asia/Dubai"));
+
+
+$string = $formatDateTime->format("Y-m-d H:i:s");
+echo "Waktu Saat ini : $string" . PHP_EOL;
+
 
 ?>
