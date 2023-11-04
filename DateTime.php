@@ -14,6 +14,8 @@ $minusOneMonth = new DateInterval("P1M");
 $minusOneMonth->invert = true;
 //Ini artinya menggurangi
 $dateTime->add($minusOneMonth);
+//Cara untuk mengubah date time zonenya tapi harus mengubah php init
+$dateTime->setTimezone(new DateTimeZone("Asia/Dubai"));
 
 var_dump($dateTime);
 
