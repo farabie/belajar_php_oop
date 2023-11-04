@@ -7,9 +7,15 @@ require_once "helper/ValidationRequest.php";
 require_once "exception/ValidationException.php";
 
 $loginRequest = new LoginRequest();
+$loginRequest->username = "Abie";
+$loginRequest->password = "";
 
 
-validateLoginRequest($loginRequest);
+try {
+    validateLoginRequest($loginRequest);
 echo "Valid" . PHP_EOL;
+}catch (ValidationException $exception) {
+    echo "Error : {$exception->getMessage()}" . PHP_EOL;
+}
 
 ?>
